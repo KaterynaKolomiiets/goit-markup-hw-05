@@ -122,7 +122,7 @@ h1, h2, h3, p{
     height: 4px;
     border-radius:2px;
     background-color: var(--accent-color);
-    bottom: 0;
+    bottom: -1px;
 }
 .contacts-header{
     margin-left:auto;
@@ -134,6 +134,12 @@ h1, h2, h3, p{
     font-weight: 500;
     line-height: 1.17;
     padding: 32px 0;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contact-header-link:hover,
+.contact-header-link:focus{
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts-header-link:hover .contacts-header-svg,
 .contacts-header-link:focus .contacts-header-svg{
@@ -147,7 +153,10 @@ h1, h2, h3, p{
     display:flex;
     fill: var(--svg-icons-grey);
     margin-right: 10px;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 
 .icon-envelope{
     width: 16px;
@@ -587,18 +596,21 @@ footer {
 }
 .btn-secondary{
     background-color:var(--background-color-secondary);
-    color: var(--secondary-text-color);
-
-    transition: color 20ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.btn.btn-secondary:hover{
+    background-color: var(--accent-color);
+}
 .btn-portfolio{
+    color: var(--secondary-text-color);
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
-                background-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
+
 }
 .btn-portfolio:hover,
 .btn-portfolio:focus{
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
